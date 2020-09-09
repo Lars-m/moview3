@@ -127,7 +127,7 @@ public class MovieResourceTest {
                 get("/movie/all")
                 .then()
                 .assertThat()
-                .body("size()", is(3))
+                .body("size()", equalTo(3))
                 .body("title", hasItems("Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets", "Once Upon a Time... in Hollywood"));
     }
 
